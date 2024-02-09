@@ -14,20 +14,20 @@ function getDirection() {
     var directionX = Math.abs(window.innerWidth);
     var directionY = Math.abs(window.innerHeight);
     var viewblock = document.getElementById("viewblock");
-    var body = document.getElementById("body");
-    var head = document.getElementById("head");
+    var body = document.getElementById("loot");
+    var html = document.getElementById("mobile");
     if(directionX > directionY) {
         // 横向きの処理
         viewblock.style.display = "block";
         body.style.overflow = "hidden";
-        head.style.overflow = "hidden";
+        html.style.overflow = "hidden";
         reloadElement("loot", "./index.html");
     } 
     if(directionX < directionY) {
         // 縦向きの処理
         viewblock.style.display = "none";
         body.style.overflow = "scroll";
-        head.style.overflow = "scroll";
+        html.style.overflow = "scroll";
         reloadElement("loot", "./index.html");
     }
 }
