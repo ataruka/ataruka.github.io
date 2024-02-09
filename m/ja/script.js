@@ -21,14 +21,27 @@ function getDirection() {
         viewblock.style.display = "block";
         body.style.overflow = "hidden";
         head.style.overflow = "hidden";
+        reloadElement("loot", "./index.html");
     } 
     if(directionX < directionY) {
         // 縦向きの処理
         viewblock.style.display = "none";
         body.style.overflow = "scroll";
         head.style.overflow = "scroll";
+        reloadElement("loot", "./index.html");
     }
 }
+
+function reloadElement(elementId, url) {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        document.getElementById(elementId).innerHTML = xhr.responseText;
+      }
+    };
+    xhr.open("GET", url, true);
+    xhr.send();
+  }
 
 
 function createLines() {
