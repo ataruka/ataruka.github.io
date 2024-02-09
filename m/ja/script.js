@@ -21,14 +21,14 @@ function getDirection() {
         viewblock.style.display = "block";
         body.style.overflow = "hidden";
         html.style.overflow = "hidden";
-        reloadElement("loot", "./index.html");
+        reloadElement("mobile", "./index.html");
     } 
     if(directionX < directionY) {
         // 縦向きの処理
         viewblock.style.display = "none";
         body.style.overflow = "scroll";
         html.style.overflow = "scroll";
-        reloadElement("loot", "./index.html");
+        reloadElement("mobile", "./index.html");
     }
 }
 
