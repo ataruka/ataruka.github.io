@@ -18,17 +18,17 @@ function getDirection() {
     var html = document.getElementById("mobile");
     if(directionX > directionY) {
         // 横向きの処理
+        reloadElement("mobile", "./index.html");
         viewblock.style.display = "block";
         body.style.overflow = "hidden";
         html.style.overflow = "hidden";
-        reloadElement("mobile", "./index.html");
     } 
     if(directionX < directionY) {
         // 縦向きの処理
+        reloadElement("mobile", "./index.html");
         viewblock.style.display = "none";
         body.style.overflow = "scroll";
         html.style.overflow = "scroll";
-        reloadElement("mobile", "./index.html");
     }
 }
 
