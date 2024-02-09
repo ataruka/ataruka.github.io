@@ -7,7 +7,6 @@ function createLines() {
     line.style.animationDuration = 6 + Math.random() * 24 + "s";
     line.style.width = Math.random() * 12 + "px";
     line.style.height = Math.random() * 12 + "px";
-
     setTimeout(function () {
         document.body.removeChild(line);
     }, 24000)
