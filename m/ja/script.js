@@ -2,34 +2,52 @@
 
 window.addEventListener("load", () => {
     getDirection();
+    resizeElement();
    });
 
 window.addEventListener("resize", () => {
     // 処理呼び出し
     getDirection();
+    resizeElement();
    });
 
 function getDirection() {
     // 端末の傾きを取得する
     var directionX = Math.abs(window.innerWidth);
     var directionY = Math.abs(window.innerHeight);
-    var viewblock = document.getElementById("viewblock");
-    var body = document.getElementById("loot");
-    var html = document.getElementById("mobile");
+    var viewblock = document.getElementsByClassName("landscape");
     if(directionX > directionY) {
         // 横向きの処理
-        reloadElement("mobile", "./index.html");
-        viewblock.style.display = "block";
-        body.style.overflow = "hidden";
-        html.style.overflow = "hidden";
+        //reloadElement("mobile", "./index.html");
+        for (var i=0;i<viewblock.length;i+=1){   
+            viewblock[i].style.display = "block";
+          }
     } 
     if(directionX < directionY) {
         // 縦向きの処理
-        reloadElement("mobile", "./index.html");
-        viewblock.style.display = "none";
-        body.style.overflow = "scroll";
-        html.style.overflow = "scroll";
+        //reloadElement("mobile", "./index.html");
+        for (var i=0;i<viewblock.length;i+=1){   
+            viewblock[i].style.display = "none";
+          }
     }
+}
+
+function resizeElement() {
+    // サイズを取得する
+    var directionX = Math.abs(window.innerWidth);
+    var directionY = Math.abs(window.innerHeight);
+    var frame = document.getElementsByClassName("frame");
+    var main_iframe = document.getElementsByClassName("main_iframe");
+
+    for (var i=0;i<frame.length;i+=1){   
+        frame[i].style.width = directionX + "px";
+        frame[i].style.height = directionY + "px";
+    }
+    for (var i=0;i<main_iframe.length;i+=1){   
+        main_iframe[i].style.width = directionX + "px";
+        main_iframe[i].style.height = directionY + "px";
+    }
+    
 }
 
 function reloadElement(elementId, url) {
@@ -42,24 +60,3 @@ function reloadElement(elementId, url) {
     xhr.open("GET", url, true);
     xhr.send();
   }
-
-
-function createLines() {
-    let line = document.createElement("div");
-    line.setAttribute("class","line");
-    document.body.appendChild(line);
-
-    line.style.left = Math.random() * innerWidth + "px";
-    line.style.animationDuration = 6 + Math.random() * 24 + "s";
-    line.style.width = Math.random() * 12 + "px";
-    line.style.height = Math.random() * 12 + "px";
-
-    setTimeout(function () {
-        document.body.removeChild(line);
-    }, 24000)
-}
-
-setInterval(function(){
-    createLines();
-
-}, 100)
