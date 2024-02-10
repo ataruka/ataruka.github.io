@@ -7,10 +7,6 @@
     box-sizing: border-box;
 }
 
-html,body {
-    overflow: hidden;
-}
-
 .wrapper {
     width: 100%;
 }
