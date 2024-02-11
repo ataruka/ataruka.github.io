@@ -1,10 +1,7 @@
 *{
-    position: relative;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    top: 0px;
-    left: 0px;
-    box-sizing: border-box;
 }
 
 .wrapper {
@@ -13,6 +10,16 @@
 
 .mobile{
     min-width: 100%;
+}
+
+html {
+    font-size: 14px;
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
 }
 
 .main_iframe{

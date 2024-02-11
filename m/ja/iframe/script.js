@@ -13,9 +13,21 @@ function resizeElement() {
     // サイズを取得する
     var directionX = Math.abs(window.innerWidth);
     var directionY = Math.abs(window.innerHeight);
-    //var fream = document.getElementsByClassName("fream");
-    //fream.style.width = directionX + "px";
-    //fream.style.height = directionY + "px";
+    var body = document.body; 
+    var layout = document.getElementById("layout"); 
+    var width_height = document.getElementsByClassName("width_height"); 
+    var frame= document.getElementById("frame"); 
+
+    body.style.width = directionX + "px";
+    body.style.height = directionY + "px";
+    layout.style.width = directionX + "px";
+    layout.style.height = directionY + "px";
+    frame.style.height = directionY + "px";
+    for (var i=0;i<width_height.length;i+=1){   
+        width_height[i].style.width = directionX + "px";
+        width_height[i].style.height = directionY + "px";
+    }
+    
     
 }
 
