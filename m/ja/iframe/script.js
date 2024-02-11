@@ -53,4 +53,4 @@ setInterval(function(){
         createLines();
     }
 
-}, 100)
+}, 500)
