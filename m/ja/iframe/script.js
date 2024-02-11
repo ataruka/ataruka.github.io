@@ -15,6 +15,7 @@ function resizeElement() {
     var directionY = Math.abs(window.innerHeight);
     var body = document.body; 
     var layout = document.getElementById("layout"); 
+    var html = document.getElementById("html"); 
     var width_height = document.getElementsByClassName("width_height"); 
     var frame= document.getElementById("frame"); 
 
@@ -23,26 +24,29 @@ function resizeElement() {
     layout.style.width = directionX + "px";
     layout.style.height = directionY + "px";
     frame.style.height = directionY + "px";
+    html.style.fontSize = directionX / 7.5 + "px";
     for (var i=0;i<width_height.length;i+=1){   
         width_height[i].style.width = directionX + "px";
         width_height[i].style.height = directionY + "px";
     }
+
     
     
 }
 
 function createLines() {
     let line = document.createElement("div");
+    let lineset = document.getElementById("lineset");
     line.setAttribute("class","line");
-    document.body.appendChild(line);
+    lineset.appendChild(line);
 
     line.style.left = Math.random() * innerWidth + "px";
     line.style.animationDuration = 6 + Math.random() * 24 + "s";
-    line.style.width = Math.random() * 12 + "px";
-    line.style.height = Math.random() * 12 + "px";
+    line.style.width = Math.random() * 0.16 + "rem";
+    line.style.height = Math.random() * 0.16 + "rem";
 
     setTimeout(function () {
-        document.body.removeChild(line);
+        lineset.removeChild(line);
     }, 10000)
 }
 

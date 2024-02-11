@@ -14,6 +14,13 @@ body, html {
     width: 100%;
 }
 
+.frame{
+    overflow-x: hidden;
+    width: 100%;
+    visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -23,6 +30,7 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
+    z-index: 0;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -51,7 +59,6 @@ html {
     /*top: 1px;*/
     border: 0px;
     position: absolute;
-    z-index: 1;
 }
 
 img {
@@ -61,11 +68,10 @@ img {
 
 .line{
     position: absolute;
-    z-index: 0;
     left: 0;
     bottom: 0;
-    width: 8px;
-    height: 8px;
+    width: 0.16rem;
+    height: 0.16rem;
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 0 8px #fff,0 0 16px #fff,0 0 24px #fff,0 0 30px #fff;
@@ -84,10 +90,10 @@ img {
 }
 @keyframes bg-animation{
     0%{
-        transform: translateY(-100vh);
+        transform: translateY(-13rem);
     }
     100%{
-        transform: translateY(300vh);
+        transform: translateY(10rem);
     }
 }
 @keyframes bg-chenger{

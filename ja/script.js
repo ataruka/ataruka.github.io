@@ -15,4 +15,4 @@ function createLines() {
 setInterval(function(){
     createLines();
 
-}, 100)
+}, 200)
