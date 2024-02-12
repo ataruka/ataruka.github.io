@@ -17,6 +17,8 @@ function resizeElement() {
     var layout = document.getElementById("layout"); 
     var html = document.getElementById("html"); 
     var width_height = document.getElementsByClassName("width_height"); 
+    var font = document.getElementsByClassName("font"); 
+    var text_font = document.getElementsByClassName("font"); 
     var frame= document.getElementById("frame"); 
 
     body.style.width = directionX + "px";
@@ -28,6 +30,12 @@ function resizeElement() {
     for (var i=0;i<width_height.length;i+=1){   
         width_height[i].style.width = directionX + "px";
         width_height[i].style.height = directionY + "px";
+    }
+    for (var i=0;i<font.length;i+=1){   
+        font[i].style.fontSize = directionX / 7.5 + "px";
+    }
+    for (var i=0;i<text_font.length;i+=1){   
+        text_font[i].style.fontSize = (directionX / 7.5) * 0.32 + "px";
     }
 
     
