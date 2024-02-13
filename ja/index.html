@@ -24,6 +24,12 @@
   <meta name="format-detection" content="email=no,telephone=no,address=no" />
   <link rel="stylesheet" href="./style.css">
   <script src="./script.js" defer></script> 
+  <script type="text/javascript">
+    var ua = navigator.userAgent;
+    if (ua.indexOf('iPhone') > 0 || (ua.indexOf('Android') > 0) && (ua.indexOf('Mobile') > 0)) {
+        location.href = '../m/ja/';
+    }
+</script>
 </head>
 <body>
     <div class="loot">
