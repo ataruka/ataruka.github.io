@@ -35,7 +35,7 @@ function resizeElement() {
         font[i].style.fontSize = directionX / 7.5 + "px";
     }
     for (var i=0;i<text_font.length;i+=1){   
-        text_font[i].style.fontSize = (directionX / 7.5) * 0.32 + "px";
+        text_font[i].style.fontSize = (directionX / 7.5) * 0.6 + "px";
     }
 
     

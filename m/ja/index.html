@@ -3,7 +3,7 @@
 
 <head>
     <title>氷の境目——MinecraftRPGMAP</title>
-    <meta charset="UTF-8" />	
+    <meta charset="UTF-8" />
     <link rel="canonical" href="https://ataruka.github.io/sifrontier/">
     <link rel="alternate" media="only screen and (max-width: 640px)" href="https://ataruka.github.io/sifrontier/m/ja/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -30,18 +30,19 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
     <script type="text/javascript">
-        var ua = navigator.userAgent;
-        if (ua.indexOf('iPhone') > 0 || (ua.indexOf('Android') > 0) && (ua.indexOf('Mobile') > 0)) {
-        }
-        else{
-          location.href = '../../ja/';
-        }
+      var ua = navigator.userAgent;
+      if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i) || ((navigator.userAgent.match(/(huaweibrowser|SamsungBrowser|UCBrowser)/i) || navigator.platform === 'MacIntel') && navigator.maxTouchPoints > 1)) {
+      }
+      else{
+        location.replace('../../ja/index.html');
+      }
     </script>
 </head>
 
 <body style="min-width: 100%; overflow: auto;">
     <div id="layout">
-        <div class="frame" style="visibility: visible; position: absolute; height: 669px; width: 459px; left: 0px; top: 0px;">
+        <div class="frame"
+            style="visibility: visible; position: absolute; height: 669px; width: 459px; left: 0px; top: 0px;">
             <div class="wrapper">
                 <iframe src="./iframe/index.html" class="main_iframe" frameborder="0"></iframe>
             </div>
